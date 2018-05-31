@@ -74,7 +74,7 @@ for(ch in chrn.vect){
  }
 
  dim(sbnewdat3)
-sbnewdat3<-data.frame(sbnewdat3)
+sbnewdat3<-as.ata.frame(sbnewdat3)
 chr<-sbnewdat3$chrn
 nSNP<-sbnewdat3$rsid
 nposit<-sbnewdat3$posit
@@ -102,7 +102,7 @@ freqcase<-sbnewdat3$freq.case
  rn<-nrow(betay)
  for(i in 2:ln){
  for(j in 1:rn){
- if(identical(alle[j,1],alle[j,i])==FALSE){
+ if(is.element(alle[j,1],alle[j,i])==FALSE){
      betay[j,i]<--betay[j,i]
      }
    }

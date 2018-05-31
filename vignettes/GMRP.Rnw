@@ -76,8 +76,8 @@ dim(data1)
 dim(data2)
 colnames(data1) <- c("SNP", "var1", "var2", "var3", "var4")
 colnames(data2) <- c("SNP", "var1", "var2", "var3", "var4", "V1", "V2", "V3")
-data1<-DataFrame(data1)
-data2<-DataFrame(data2)
+data1<-as.data.frame(data1)
+data2<-as.data.frame(data2)
 data12 <- fmerge(fl1=data1, fl2=data2, ID1="SNP", ID2="SNP", A=".dat1", B=".dat2", method="No")
 @
 
